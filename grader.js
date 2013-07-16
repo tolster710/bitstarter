@@ -62,7 +62,7 @@ var restToFile = function(result, response) {
 	console.error('Error: ' + util.format(response.message));
 	}
     else {
-	console.error("Wrote %s", urlfile);
+//	console.error("Wrote %s", urlfile);
 	fs.writeFileSync(urlfile, result);
 
 	}
@@ -78,6 +78,7 @@ if(require.main == module) {
 		.parse(process.argv);
     if (program.url.length >0){
 	rest.get(program.url).on('complete',restToFile);
+	sleep(2000);
 	var checkJson = checkHtmlFile(urlfile, program.checks);
 	}
     else {
