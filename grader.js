@@ -22,7 +22,7 @@ var cheerio = require('cheerio');
 var rest = require('restler');
 var HTMLFILE_DEFAULT = "index.html";
 var CHECKSFILE_DEFAULT = "checks.json";
-
+var urlfile = "url.txt";
 var assertFileExists = function(infile)  {
     var instr = infile.toString();
     if(!fs.existsSync(instr))  {
@@ -77,7 +77,8 @@ if(require.main == module) {
 	.option('-u, --url <url_addr>', 'Heroku URL')
 		.parse(process.argv);
     if (program.url.length >0){
-	var checkJson =  rest.get(program.url).on('complete',restToFile);
+	rest.get(program.url).on('complete',restToFile);
+	var checkJson = checkHtmlFile(urlfile, program.checks);
 	}
     else {
 	var checkJson = checkHtmlFile(program.file, program.checks);}
