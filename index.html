@@ -8,7 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
-   
+  
+
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
+
+	
     <link type="text/css" rel="stylesheet"
 	  href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css">
     <style type="text/css">
@@ -39,8 +44,44 @@
       }
       }
       
+	/*All Form factors*/
+	/*Main body Headings*/
+	body {
+	 fond-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	}
+	.heading .subheading {
+	 font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+	 text-align: center;
+	}
+	
+	p.lead {
+	 padding-top: 1.5%;
+	 font-size: 24px;
+	 line-height: 30px;
+	}
+	p {
+	 font-size: 18px;
+	 line-height: 30px;
+	}
 
-
+	/*video pitch and action*/
+	.pitch {
+	 padding: 2.5% 0%;
+	}
+	.order {
+	 padding: 2% 0%;
+	}
+	.actions {
+	 background-color: #343434;
+	 padding: 3% 0%;
+	}
+	.video, .thermometer, .order, .social, .statistics {
+		text-align: center;
+	}
+	.statistics h3, .statistics p {
+	 color: white;
+	}
+	
 
 
 
@@ -55,10 +96,7 @@
       .navigation, .pitch, .section1, .section2, .faq, .footer {
       padding: 10px 0px 10px 0px;
       }
-      .video, .thermometer, .order, .social {
-      border: 1px dotted;
-      text-align: center;
-      }
+      
       {
       .video{
       /*1px internal borders --4x 1px to 120*/
@@ -77,7 +115,9 @@
     </head>
   <body>
 
-    <div lclass="navbar navbar-inverse navbar-fixed-top">
+
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
 	<div class="container">
 	  <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="nav.collapse">
@@ -92,17 +132,72 @@
 	      <li><a href="#about">About</a></li>
 	      <li><a href="#contact">Contact</a></li>
 	      </ul>
-	    </div>
+	    </div> <!-- Nav Collapse-->
 	  </div>
 	</div>
       </div>
 
      
-     
+     <!-- Font subheadings paired from google fonts -->
+	<!-- www.google.com/fonts/specimin/Ubuntu-->
+	<div class="container">
+	<div class="row-fluid heading">
+	 <div class="span12">
+	  <h1>Political Empowerment</h1>
+	 </div>
+	</div>
+	<div class="row-fluid subheading">
+	 <div class="span12">
+	  <!-- Special typography from BootStrap for lead paragraph -->
+	  <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
+	  <p class="lead">Smarter voting through analysis.</p>
+	 </div>
+	</div>
+	<div class="row-fluid pitch">
+	 <div class="span5 offset 1 video">
+	  <img class="img-polaroid" src="http://placehold.it/480x300">
+	 </div>
+	 <!-- We define a new 'actions' div to contain statistics, order and share buttons. -->
+	 
+	 <div class="span5 actions">
+	  <div class="span8 offset2">
+	   <div class="statistics">
+	    <div class="span4">
+		<!-- linediv-l and linediv-r give dividing lines that look different 
+		in horizontal and vertical layouts, illustrating media queries -->
+		
+	     <div class="linediv-l">
+	     <h3>1000</h3> <p> of $10,000</p>
+	     </div>
+	    </div>
+	    <div class="span4">
+	     <div class="linediv-c">
+	      <h3>$6000</h3> <p> of $10,000</p>
+	     </div>
+	    </div>
+	    <div class="span4">
+	     <div class="linediv-r">
+	      <h3>10</h3> <p> days left</p>
+	     </div>
+	    </div>
+	   </div>
+	  </div>
+	  <div class="span10 offset1">
+	    <!-- Bootstrap progress bar-->
+	
+
+	  </div>
+	 </div>
+	</div>		
+
+
+
+
+
      
       
 
-
+<!-- OLD CODE FROM PREVIOUS STATIC PAGE-->
     <div class="container">
       <div class="navigation">
 	<div class="span2 logo">
